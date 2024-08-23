@@ -1,0 +1,133 @@
+@import '../Utils/mixin.scss';
+
+.background {
+    width: 100%;  
+    min-height: 100vh;
+    background: radial-gradient(circle, rgba(88,89,94,1) 0%, rgba(0,0,0,1) 100%);
+    background-size: cover;
+    background-position: center;
+    position: relative; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+ 
+}
+
+
+
+.button {
+    padding: 10px 20px;
+    background: linear-gradient(90deg, rgb(81 81 81) 0%, rgb(0 0 0) 0%, rgb(0 0 0 / 41%) 100%);
+    color: #fff;
+    border-radius: 10px;
+    opacity: 1;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    min-width: 38px;
+    align-items: center;
+    @include mobile{
+        padding: 10px;
+        min-width: 25px;
+        font-size: 14px;
+    }
+}
+.button--add{
+    background: linear-gradient(90deg, #476c66 0%, rgb(172 211 202) 0%, rgb(109 175 190) 100%);
+}
+.delete-button {
+    background: linear-gradient(90deg, #476c66 0%, rgb(197 0 0) 0%, rgb(255 0 0) 100%);
+}
+
+.button:hover {
+    opacity: 0.8;
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+.search-container {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    @include tablet {
+        width: 60% !important;
+      }
+  
+      @include mobile {
+        grid-template-columns: 1fr; // 1 column on mobile
+      }
+&--icon{
+    position: absolute;
+    right: 0;
+   top: 50%;
+    transform: translateY(-50%),
+}
+
+&--input {
+    width: 95%;
+    padding: 10px 8px 10px 35px;
+    border-radius: 4px;
+    font-size: 16px;
+    background: transparent;
+
+}
+
+}
+.input-container{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    &--title{
+        color: #fff;
+        font-size: 17px;
+        @include mobile{
+            font-size: 15px;
+        }
+    }
+    &--input{
+       
+        padding: 10px 8px 10px 35px;
+        border-radius: 4px;
+        font-size: 16px;
+        background: transparent;
+        color: '#ffff';
+    }
+    &--multiline{
+        width: 290;
+        height: 100px;
+        padding: 10px 8px 10px 35px;
+        border-radius: 4px;
+        font-size: 16px;
+        background: transparent;
+        color: '#ffff';
+    }
+}
+.icon{
+    background: grey;
+    padding: 8px;
+    border-radius: 17px;
+
+}
+input::placeholder {
+    color: #ffff; 
+    opacity: 0.8; 
+}
+
+/* For textarea */
+textarea::placeholder {
+    color: #ffff; 
+    opacity: 0.8; 
+}    
+
+input {
+    color: #ffff;  /* Change to your desired text color */
+}
+
+/* For textarea */
+textarea {
+    color: #ffff; /* Change to your desired text color */
+}
+
+
